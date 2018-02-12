@@ -1,0 +1,422 @@
+// Based on Superhero 3.1.1
+// Tweaked by Space - http://northpaw.space
+// Bootswatch
+// -----------------------------------------------------
+
+@import url("//fonts.googleapis.com/css?family=Lato:300,400,700");
+
+// Navbar =====================================================================
+
+.navbar {
+  .box-shadow(none);
+  border: none;
+  font-size: 16px;
+
+  &-default {
+
+    .badge {
+      background-color: #fff;
+      color: @navbar-default-bg;
+    }
+  }
+
+  &-inverse {
+
+    .badge {
+      background-color: #fff;
+      color: @navbar-inverse-bg;
+    }
+  }
+}
+
+// Buttons ====================================================================
+
+.btn {
+
+  font-weight: 300;
+
+  &-default {
+    &:hover {
+      background-color: darken(@btn-default-bg, 3%);
+    }
+  }
+
+  &-sm,
+  &-xs {
+    font-size: 12px;
+  }
+}
+
+// Typography =================================================================
+
+body {
+  font-weight: 300;
+}
+
+.text-primary,
+.text-primary:hover {
+  color: @brand-primary;
+}
+
+.text-success,
+.text-success:hover {
+  color: @brand-success;
+}
+
+.text-danger,
+.text-danger:hover {
+  color: @brand-danger;
+}
+
+.text-warning,
+.text-warning:hover {
+  color: @brand-warning;
+}
+
+.text-info,
+.text-info:hover {
+  color: @brand-info;
+}
+
+.page-header {
+  border-bottom-color: @table-border-color;
+}
+
+.dropdown-menu {
+
+  border: none;
+  margin: 0;
+  .box-shadow(none);
+
+  > li > a {
+    font-size: 14px;
+    font-weight: 300;
+  }
+}
+
+.btn-group.open .dropdown-toggle {
+  .box-shadow(none);
+}
+
+.dropdown-header {
+  font-size: 13px;
+}
+
+.list-group-item:first-child {
+	margin-top: 0;
+}
+
+.list-group-item {
+	margin-top: 0.5em;
+}
+
+// Tables =====================================================================
+
+table,
+.table {
+  font-size: 14px;
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  .text-muted {
+    color: @text-muted;
+  }
+
+  > thead > tr > th,
+  > tbody > tr > th,
+  > tfoot > tr > th,
+  > thead > tr > td,
+  > tbody > tr > td,
+  > tfoot > tr > td {
+    border-color: transparent;
+  }
+ }
+
+// Forms ======================================================================
+
+input,
+textarea {
+  color: @input-color;
+}
+
+label,
+.radio label,
+.checkbox label,
+.help-block {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.input-addon,
+.input-group-addon {
+  color: @text-color;
+}
+
+.input-addon,
+.input-group-addon {
+  background: @table-bg-hover;
+}
+
+.has-warning {
+  .help-block,
+  .control-label,
+  .form-control-feedback {
+    color: @brand-warning;
+  }
+}
+
+.has-error {
+  .help-block,
+  .control-label,
+  .form-control-feedback {
+    color: @brand-danger;
+  }
+}
+
+.has-success {
+  .help-block,
+  .control-label,
+  .form-control-feedback {
+    color: @brand-success;
+  }
+}
+
+.form-control:focus {
+  .box-shadow(none);
+}
+
+.form-control {
+  font-weight: 400;
+}
+
+.has-warning,
+.has-error,
+.has-success {
+  .form-control:focus {
+    .box-shadow(none);
+  }
+}
+
+.checkbox.styled input {
+  position: absolute; // take it out of document flow
+  opacity: 0; // hide it
+  width: 0;
+}
+
+  .checkbox.styled label {
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  // Box.
+  .checkbox.styled .checkbox-value {
+    content: '';
+    margin-right: 5px;
+    display: inline-block;
+    vertical-align: text-top;
+    width: 18px;
+    height: 18px;
+    background: white;
+  }
+
+  // Box hover
+  .checkbox.styled input:hover + .checkbox-value {
+    background: @brand-info;
+  }
+  
+  // Box focus
+  .checkbox.styled input:focus + .checkbox-value {
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+  }
+
+  // Box checked
+  .checkbox.styled input:checked + .checkbox-value {
+    background: @brand-info;
+  }
+  
+  // Disabled state label.
+  .checkbox.styled input:disabled + label {
+    color: #b8b8b8;
+    cursor: auto;
+  }
+
+  // Disabled box.
+  .checkbox.styled input:disabled + .checkbox-value {
+    box-shadow: none;
+    background: #ddd;
+  }
+
+  // Checkmark. Could be replaced with an image
+  .checkbox.styled input:checked + .checkbox-value:after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 9px;
+    background: white;
+    width: 2px;
+    height: 2px;
+    box-shadow: 
+      2px 0 0 white,
+      4px 0 0 white,
+      4px -2px 0 white,
+      4px -4px 0 white,
+      4px -6px 0 white,
+      4px -8px 0 white;
+    transform: rotate(45deg);
+  }
+
+.select2 {
+  color: @body-bg !important;
+  width: 100% !important;
+  font-weight: 400 !important;
+  height: 40px !important;
+}
+
+.select2-container--default .select2-results__option .select2-results__option,
+.select2-container--default .select2-search--dropdown .select2-search__field {
+  font-weight: 400 !important;
+}
+
+.select2-container--default,
+.select2-selection--single {
+  border-radius: 0 !important;
+  border: none 0px transparent !important;
+}
+
+.select2-container--default,
+.select2-selection--single,
+.select2-selection__arrow {
+  height: 40px !important;
+  border-radius: 0 !important;
+  border: none 0px transparent !important;
+}
+
+.select2-results__option {
+  font-weight: 400 !important;
+}
+
+.select2-results {
+  color: @body-bg !important;
+}
+
+.select2-selection .select2-selection--single {
+  height: 40px !important;
+  border-radius: 0 !important;
+  border: none 0px transparent !important;
+}
+
+.select2-container--default .select2-selection--single {
+  padding: 0.4em !important;
+  padding-left: 0.9em !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #2b3e50 transparent transparent transparent !important;
+}
+
+// Navs =======================================================================
+
+.nav {
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    border-color: transparent;
+  }
+}
+
+.nav-tabs {
+  > li > a {
+    color: @text-color;
+  }
+}
+
+.nav-pills {
+  > li > a {
+    color: @text-color;
+  }
+}
+
+.pager {
+  a {
+    color: @text-color;
+  }
+}
+
+// Indicators =================================================================
+
+.close {
+  opacity: 0.4;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.label {
+  font-weight: 300;
+}
+
+.alert {
+  color: #fff;
+
+  a,
+  .alert-link {
+    color: #fff;
+  }
+}
+
+// Progress bars ==============================================================
+
+// Containers =================================================================
+
+.well {
+  .box-shadow(none);
+}
+
+.panel .well {
+  background-color: @table-bg-hover;
+}
+
+.well .well {
+  background-color: @table-bg-hover;
+}
+
+.panel {
+  border: none;
+
+  &-default > .panel-heading {
+    background-color: @table-bg-hover;
+    color: @text-color;
+  }
+}
+
+.thumbnail {
+  background-color: @well-bg;
+  border: none;
+}
+
+.modal {
+  padding: 0;
+
+  &-header,
+  &-footer {
+    background-color: @table-bg-hover;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+.popover {
+  &-title {
+    border: none;
+  }
+}
+
+.badge-container {
+  background: @list-group-bg;
+}

@@ -66,12 +66,12 @@
 					<table id="social-media-table" class="table table-hover">
 						<thead class="hidden">
 							<tr>
-								<td><span class="hidden">Icon</span></td><td>Name</td><td>Category</td><td>Link</td>
+								<td><span class="hidden">Icon</span></td><td>Name</td><!--<td>Category</td>--><td>Link</td>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td><img class="table-icon" src="img/icons8-ball-528.png" alt="Twitter logo"><a href="#" target="_BLANK" class="td-link" aria-hidden="true"></a></td><td class="name-column">Fursuits - Gotta Catch 'Em All<a href="#" target="_BLANK" class="td-link" aria-hidden="true"></a></td><!--<td class="category-column"><span class="label label-warning">Loading...</span><a href="#" target="_BLANK" class="td-link" aria-hidden="true"></a></td>--><td><a href="#" target="_BLANK"  class="btn btn-info btn-lg">Join now!</a></td>
+								<td><img class="table-icon" src="img/icons8-ball-528.png" alt="Catch Em All logo"><a href="https://catchemall.nordicfuzzcon.org/" target="_BLANK" class="td-link" aria-hidden="true"></a></td><td class="name-column">Fursuits - Gotta Catch 'Em All<a href="https://catchemall.nordicfuzzcon.org/" target="_BLANK" class="td-link" aria-hidden="true"></a></td><!--<td class="category-column"><span class="label label-warning">Loading...</span><a href="#" target="_BLANK" class="td-link" aria-hidden="true"></a></td>--><td><a href="https://catchemall.nordicfuzzcon.org/" target="_BLANK" class="btn btn-info btn-lg">Join now!</a></td>
 							</tr>
 							<tr class="extra-text">
 								<td colspan=4>
@@ -87,18 +87,16 @@
 								</td>
 							</tr>
 							<tr>
-								<td><img class="table-icon" src="img/icons8-ball-528.png" alt="Twitter logo"><a href="#" target="_BLANK" class="td-link" aria-hidden="true"></a></td><td class="name-column">Fursuits - Gotta Catch 'Em All<a href="#" target="_BLANK" class="td-link" aria-hidden="true"></a></td><!--<td class="category-column"><span class="label label-warning">Loading...</span><a href="#" target="_BLANK" class="td-link" aria-hidden="true"></a></td>--><td><a href="#" target="_BLANK"  class="btn btn-info btn-lg">Join now!</a></td>
+								<td><img class="table-icon" src="img/icons8-phonelink-lock-512.png" alt="Achievement Hunting logo"><a href="https://catchemall.nordicfuzzcon.org/" target="_BLANK" class="td-link" aria-hidden="true"></a></td><td class="name-column">Achievement Hunting<a href="https://catchemall.nordicfuzzcon.org/" target="_BLANK" class="td-link" aria-hidden="true"></a></td><!--<td class="category-column"><span class="label label-warning">Loading...</span><a href="#" target="_BLANK" class="td-link" aria-hidden="true"></a></td>--><td><a href="https://catchemall.nordicfuzzcon.org/" target="_BLANK" class="btn btn-info btn-lg">Join now!</a></td>
 							</tr>
 							<tr class="extra-text">
 								<td colspan=4>
 									<p>
-										The success from last year is back! This is a fursuit catching game in which three factions compete with each other to “catch” the most amount of fursuits during the convention!
+										Have fun collecting various achievements around the convention, then view the ones you’ve collected so far in the handy NFC app so that you can brag to your friends! This year, achievements are primarily code based. If you find a code hidden anywhere, make sure to bring it to the wise and all knowing Huehuecoyotl (The Blip Master) so that it may be presented to the Gods. Rumour has it that a shipment of gold coins have also been lost around the convention area... not sure what that is all about, but if you find one, maybe the Huehuecoyotl would be interested in that as well.
 									</p>
+									
 									<p>
-										Catching fursuits is as simple as meeting a fursuit, and asking them for their catch code printed onto their fursuit badge. Enter the code into the website or app, and blamo - Your catch has been registered!
-									</p>
-									<p>
-										<em>Only fursuits with blue badges are part of the game.</em>
+										There's a list of known achievements in the conbook, but the convention area is vast and mysterious, so who knows if there are additional achievements hidden away somewhere? Be observant and curious, and you may discover the hidden secrets of the convention!
 									</p>
 								</td>
 							</tr>
@@ -258,6 +256,10 @@
 			border-top: 5px solid #4e5d6c;
 			border-bottom: 5px solid #4e5d6c;
 			background-color: hsl(211, 16%, 34%);
+		}
+		
+		#social-media-table tbody tr.extra-text {
+			cursor: default;
 		}
 		
 		#social-media-table tbody tr .btn {
@@ -470,7 +472,7 @@
 					$(this).closest("tr").find(".btn").addClass("active");
 				});
 				
-				$('#social-media-table tbody tr').on('click', function(e) {
+				$('#social-media-table tbody tr').not(".extra-text").on('click', function(e) {
 					window.open($(this).find(".btn").attr("href"));
 				});
 					

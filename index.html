@@ -87,7 +87,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td><img class="table-icon" src="img/icons8-phonelink-lock-512.png" alt="Achievement Hunting logo"><a href="https://catchemall.nordicfuzzcon.org/" target="_BLANK" class="td-link" aria-hidden="true"></a></td><td class="name-column">Achievement Hunting<a href="https://catchemall.nordicfuzzcon.org/" target="_BLANK" class="td-link" aria-hidden="true"></a></td><!--<td class="category-column"><span class="label label-warning">Loading...</span><a href="#" target="_BLANK" class="td-link" aria-hidden="true"></a></td>--><td><a href="https://catchemall.nordicfuzzcon.org/" target="_BLANK" class="btn btn-info btn-lg">Join now!</a></td>
+								<td><img class="table-icon" src="img/icons8-phonelink-lock-512.png" alt="Achievement Hunting logo"><a href="https://www.nordicfuzzcon.org/Account/Achievements" target="_BLANK" class="td-link" aria-hidden="true"></a></td><td class="name-column">Achievement Hunting<a href="https://www.nordicfuzzcon.org/Account/Achievements" target="_BLANK" class="td-link" aria-hidden="true"></a></td><!--<td class="category-column"><span class="label label-warning">Loading...</span><a href="#" target="_BLANK" class="td-link" aria-hidden="true"></a></td>--><td><a href="https://www.nordicfuzzcon.org/Account/Achievements" target="_BLANK" class="btn btn-info btn-lg">Join now!</a></td>
 							</tr>
 							<tr class="extra-text">
 								<td colspan=4>
@@ -97,6 +97,20 @@
 									
 									<p>
 										There's a list of known achievements in the conbook, but the convention area is vast and mysterious, so who knows if there are additional achievements hidden away somewhere? Be observant and curious, and you may discover the hidden secrets of the convention!
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td><img class="table-icon" src="img/MausiesLabIcon_1024px.png" alt="Mausie's Lab logo"><a href="https://mausieslab.nordicfuzzcon.org/mausielab.html" target="_BLANK" class="td-link" aria-hidden="true"></a></td><td class="name-column">Mausie's Lab<a href="https://mausieslab.nordicfuzzcon.org/mausielab.html" target="_BLANK" class="td-link" aria-hidden="true"></a></td><!--<td class="category-column"><span class="label label-warning">Loading...</span><a href="#" target="_BLANK" class="td-link" aria-hidden="true"></a></td>--><td><a href="https://mausieslab.nordicfuzzcon.org/mausielab.html" target="_BLANK" class="btn btn-info btn-lg">Play now!</a></td>
+							</tr>
+							<tr class="extra-text">
+								<td colspan=4>
+									<p>
+										Help Mausie eat cheese and avoid the evil clones of Trax in this NFC themed version of one of the oldest arcade games.
+										To play the game via Telegram, ask the NFC info bot for a game in any channel by typing "@nfcinfobot game" and selecting it in the list.
+									</p>
+									<p>
+										If you play the game directly in the browser without Telegram, your highscore won't be saved anywhere...
 									</p>
 								</td>
 							</tr>
@@ -296,171 +310,6 @@
 		}
 		</style>
 		<script>
-			var social_media_json = {
-				"Links":[
-					{
-						"Name":"NFC Telegram",
-						"Link":"https://telegram.org/NFC",
-						"Position":5,
-						"Category":"General",
-						"Group":"Telegram links",
-						"Type":"Telegram"
-					},
-					{
-						"Name":"NFC Telegram LIVE",
-						"Link":"https://telegram.org/NFCLive",
-						"Position":6,
-						"Category":"At convention",
-						"Group":"Telegram links",
-						"Type":"Telegram"
-					},
-					{
-						"Name":"Facebook",
-						"Link":"https://facebook.org/nordicfuzzcon",
-						"Position":6,
-						"Category":"General",
-						"Group":"Other links",
-						"Type":"Facebook"
-					},
-					{
-						"Name":"Test",
-						"Link":"https://facebook.org/nordicfuzzcon",
-						"Position":6,
-						"Category":"General",
-						"Group":"Other links",
-						"Type":"Website"
-					},
-					{
-						"Name":"Twitter",
-						"Link":"https://facebook.org/nordicfuzzcon",
-						"Position":6,
-						"Category":"General",
-						"Group":"Other links",
-						"Type":"Twitter"
-					},
-					{
-						"Name":"NFC Telegram LIVE",
-						"Link":"https://telegram.org/NFCLive",
-						"Position":6,
-						"Category":"At convention",
-						"Group":"Telegram links",
-						"Type":"Telegram"
-					},
-					{
-						"Name":"Facebook",
-						"Link":"https://facebook.org/nordicfuzzcon",
-						"Position":6,
-						"Category":"General",
-						"Group":"Other links",
-						"Type":"Facebook"
-					},
-					{
-						"Name":"Test",
-						"Link":"https://facebook.org/nordicfuzzcon",
-						"Position":6,
-						"Category":"General",
-						"Group":"Other links",
-						"Type":"Website"
-					},
-					{
-						"Name":"Twitter",
-						"Link":"https://facebook.org/nordicfuzzcon",
-						"Position":6,
-						"Category":"General",
-						"Group":"Other links",
-						"Type":"Twitter"
-					},
-					{
-						"Name":"NFC Telegram LIVE",
-						"Link":"https://telegram.org/NFCLive",
-						"Position":6,
-						"Category":"At convention",
-						"Group":"Telegram links",
-						"Type":"Telegram"
-					},
-					{
-						"Name":"Facebook",
-						"Link":"https://facebook.org/nordicfuzzcon",
-						"Position":6,
-						"Category":"General",
-						"Group":"Other links",
-						"Type":"Facebook"
-					},
-					{
-						"Name":"Test",
-						"Link":"https://facebook.org/nordicfuzzcon",
-						"Position":6,
-						"Category":"General",
-						"Group":"Other links",
-						"Type":"Website"
-					},
-					{
-						"Name":"Twitter",
-						"Link":"https://facebook.org/nordicfuzzcon",
-						"Position":6,
-						"Category":"General",
-						"Group":"Other links",
-						"Type":"Twitter"
-					}
-				]
-			};
-			
-			var social_json_url = "";
-		
-			function render_link_list(json_links) {
-				var rendered_html = "";
-				for (var i = 0; i < json_links.length; i++) {
-					var link = json_links[i];
-					var icon_src = "img/icons8-link-528.png";
-					var action = "Go to";
-					var category_class = "info";
-					
-					if (link["Type"] == "Telegram") {
-						icon_src = "img/icons8-telegram-app-528.png";
-						action = "Join";
-					} else if (link["Type"] == "Twitter") {
-						icon_src = "img/icons8-twitter-528.png";
-						action = "Follow";
-					} else if (link["Type"] == "Facebook") {
-						icon_src = "img/icons8-facebook-528.png";
-						action = "Follow";
-					}
-					
-					if (link["Category"] == "At convention") {
-						category_class = "warning";
-					} else if (link["Category"] == "General") {
-						category_class = "info";
-					}
-					rendered_html += '<tr><td class="icon-column"><img class="table-icon" src="'+ icon_src +'" alt="'+ link["Type"] +' logo"><a href="'+ link["Link"] +'" target="_BLANK" class="td-link" aria-hidden="true"></a></td><td class="name-column"><img class="inline-icon" src="'+ icon_src +'" alt="'+ link["Type"] +' logo">'+ link["Name"] +'<a href="'+ link["Link"] +'" target="_BLANK" class="td-link" aria-hidden="true"></a></td><td class="category-column"><span class="label label-'+ category_class +'">'+ link["Category"] +'</span><a href="'+ link["Link"] +'" target="_BLANK" class="td-link" aria-hidden="true"></a></td><td><a href="'+ link["Link"] +'" target="_BLANK"  class="btn btn-info btn-lg">'+ action +'</a><a href="'+ link["Link"] +'" target="_BLANK" class="td-link" aria-hidden="true"></a></td></tr>';
-					//receipt_html += '<tr><td>' + json_result.items[i].name + '</td><td>' + json_result.items[i].count + '</td><td>' + json_result.items[i].list_cost + ' NOK</td></tr>';
-				}
-				return rendered_html;
-			}
-			function initialize_search(searchFieldSelector, containerSelector, contentSelector, clearSearchButton) {
-				$(searchFieldSelector).parent().parent().append("<div class='no-results-msg'><p class='help-block'>No results match that query.</p></div>");
-				$(".no-results-msg").hide();
-				$(clearSearchButton).on("click", function(){
-					$(searchFieldSelector).val("");
-					$(searchFieldSelector).keyup();
-				});
-				$(searchFieldSelector).keyup(function() {
-					var search = $.trim(this.value);
-					if (search === "") {
-						$(".no-results-msg").hide();
-						$(containerSelector).show();
-					}
-					else {
-						$(containerSelector).hide();
-						$(containerSelector+" "+contentSelector+":contains('" + search + "')").closest(containerSelector).show(); // show elements that match the current search query
-						if ($(containerSelector+':visible').length == 0) {
-							$(".no-results-msg").show();
-						} else {
-							$(".no-results-msg").hide();
-						}
-					}
-				});
-			}
-			
 			$( document ).ready(function() {
 				initialize_search("#search_field", "#social-media-table tbody tr", "td", "#clear_search");
 				$.getJSON(social_json_url, function(json_links) {

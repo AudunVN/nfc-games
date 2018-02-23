@@ -311,11 +311,6 @@
 		</style>
 		<script>
 			$( document ).ready(function() {
-				initialize_search("#search_field", "#social-media-table tbody tr", "td", "#clear_search");
-				$.getJSON(social_json_url, function(json_links) {
-					social_media_json = json_links;
-					$("#social-media-table tbody").html(render_link_list(json_links["Links"]));
-				});
 				$('#social-media-table tbody tr').not(".btn").on('mouseenter', function(e) {
 					$("#social-media-table tbody tr .btn").removeClass("active");
 					$(this).closest("tr").find(".btn").addClass("active");

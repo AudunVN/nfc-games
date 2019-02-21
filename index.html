@@ -13,6 +13,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <title>NordicFuzzCon Games</title>
 
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/webmanifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <!-- Themed Bootstrap core CSS -->
     <link href="styles/nfc_bootstrap.min.css" rel="stylesheet">
 
@@ -30,27 +49,14 @@
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="https://www.nordicfuzzcon.org/">
-                        <img alt="NFC-logo" src="img/NFCicon.png"> <span class="nfc-logotype">NordicFuzzCon</span>
-                    </a>
+					<a class="navbar-brand" href="https://nordicfuzzcon.org">
+						<img src="/logo-small-tsp-edit.svg" alt="NFC logo"> <span class="logotype">NordicFuzzCon</span>
+					</a>
                 </div>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="https://www.nordicfuzzcon.org/">
-                                Front Page
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+				<a class="btn btn-primary navbar-btn no-fullwidth-btn" id="front-page-btn" href="https://www.nordicfuzzcon.org/">
+					<i class="fa fa-home"></i><span class="desktopOnly displayInline"> Main Page</span>
+				</a>
             </div>
         </nav>
 		<div class="background-container">
@@ -58,7 +64,7 @@
 		</div>
 
         <article class="main-content container">
-			<div class="panel panel-default">
+			<div class="panel panel-info">
 				<div class="panel-heading">
 					<h4 class="panel-title">Our Games</h4>
 				</div>
@@ -188,7 +194,7 @@
 		}
 		
 		#social-media-table .extra-text {
-			border-bottom: 15px solid #4e5d6c;
+			border-bottom: 15px solid #f6f7f9;
 			
 		}
 		
@@ -202,7 +208,7 @@
 		
 		@media (max-width: 35em) {
 			#social-page .main-content > .panel:first-child {
-				margin-top: 1em;
+				margin-top: 4em;
 			}
 			
 			#social-media-table thead {
@@ -268,15 +274,11 @@
 		#social-media-table tbody tr {
 			position: relative;
 			cursor: pointer;
-			background-color: #3e4956;
+			background-color: #ced1d7;
 		}
 			
 		#social-media-table tbody tr.extra-text {
-			background-color: #475462;
-		}
-			
-		#social-media-table tbody tr:first-child {
-			border-top: 5px solid #4e5d6c;
+			background-color: #e5e8ec;
 		}
 		
 		#social-media-table tbody tr.extra-text {
@@ -301,7 +303,7 @@
 		}
 		
 		.main-content .panel:first-child {
-			margin-top: 2em;
+			margin-top: 4.5em;
 		}
 
 		.interact .fa {
@@ -314,6 +316,14 @@
 
 		.interact .fa:hover {
 		  background: @btn-primary-bg;
+		}
+
+		body {
+			background: url(../img/Background_2000px_blurred.jpg) #e9f4fb;
+			background-size: cover;
+			background-position: 88% 69%;
+			background-attachment: fixed;
+			padding-bottom: 0em;
 		}
 		</style>
 		<script>
